@@ -23,7 +23,7 @@ public class AccountBuilder {
         return this;
     }
 
-    public AccountBuilder setAmount(double amount){
+    public AccountBuilder setAmount(float amount){
         account.setAmount(amount);
         return this;
     }

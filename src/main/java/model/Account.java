@@ -6,7 +6,7 @@ public class Account {
 
     private Long id;
     private String type;
-    private double amount;
+    private float amount;
     private LocalDate creationDate;
     private Client client;
 
@@ -18,7 +18,7 @@ public class Account {
         return type;
     }
 
-    public double getAmount() {
+    public float getAmount() {
         return amount;
     }
 
@@ -38,7 +38,7 @@ public class Account {
         this.type = type;
     }
 
-    public void setAmount(double amount) {
+    public void setAmount(float amount) {
         this.amount = amount;
     }
 

@@ -114,7 +114,7 @@ public class AccountRepositoryMySQL implements AccountRepository {
         return new AccountBuilder()
                 .setId(rs.getLong ("id_account"))
                 .setType("type")
-                .setAmount(rs.getDouble("amount"))
+                .setAmount(rs.getFloat("amount"))
                 .setCreationDate(LocalDate.ofEpochDay(rs.getDate("creationDate").getTime()))
                 .build();
     }

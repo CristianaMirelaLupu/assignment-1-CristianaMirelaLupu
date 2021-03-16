@@ -53,13 +53,12 @@ public class JDBConnectionWrapper {
         String sql_account = "CREATE TABLE IF NOT EXISTS account (" +
                 "  id_account int(11) NOT NULL AUTO_INCREMENT," +
                 "  type varchar(500) NOT NULL," +
-                "  amount double (11) NOT NULL," +
-                "  creationDate datetime DEFAULT NULL," +
-                "  publishedDate datetime DEFAULT NULL," +
+                "  amount float (11) NOT NULL," +
+                "  creationDate date DEFAULT NULL," +
                 "  PRIMARY KEY (id_account)," +
-                "  UNIQUE KEY id_UNIQUE (id_account)" +
+                "  UNIQUE KEY id_UNIQUE (id_account)," +
                 "  id_client int(11) NOT NULL,"+
-                "CONSTRAINT FK_ID FOREIGN KEY (id_client) REFERENCES client (id_client)"+
+                "  FOREIGN KEY (id_client) REFERENCES client(id_client)"+
                 ") ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;";
         statement.execute(sql_account);
     }
